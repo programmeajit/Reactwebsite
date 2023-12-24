@@ -1,0 +1,63 @@
+
+.about-bg-image {
+    background-image: url('../../assets/about/aboutus.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .about-bg-image h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff; /* Set text color to white */
+  }
+  
+  .about-bg-image p {
+    font-size: 1.5em;
+    color: #fff; /* Set text color to white */
+  }
+  
+  
+  /* Responsive adjustments for small screens */
+  @media (max-width: 576px) {
+    .about-bg-image {
+      height: 50vh;
+    }
+  
+    .about-bg-image h1 {
+      font-size: 2em;
+    }
+  
+    .about-bg-image p {
+      font-size: 1em;
+    }
+  
+  }
+  
+  /* Your aboutus.css */
+
+  .about-container {
+    margin-bottom: 20px;
+  }
+  
+  .about-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .about-description h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .about-image img {
+    width: 100%; /* Make the image fill the container width */
+    height: 100%; /* Make the image fill the container height */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+  }
+  

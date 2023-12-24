@@ -23,7 +23,7 @@ const MyNavbar = () => {
             <Nav.Link href="/" className="ml-3"> {/* Added margin between links */}
               <FaHome /> Home
             </Nav.Link>
-            <Nav.Link href="#about" className="ml-3"> {/* Added margin between links */}
+            <Nav.Link href="/about" className="ml-3"> {/* Added margin between links */}
               <FaInfo /> About
             </Nav.Link>
             <Nav.Link href="#services" className="ml-3"> {/* Added margin between links */}
