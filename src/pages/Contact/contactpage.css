@@ -1,0 +1,70 @@
+/* contactpage.css */
+.contact-page-sidebar {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 485px;
+}
+.contact-bg-image {
+    background-image: url('../../assets/contact/contactbg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-bg-image h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff; /* Set text color to white */
+  }
+  
+  .contact-bg-image p {
+    font-size: 1.5em;
+    color: #fff; /* Set text color to white */
+  }
+  
+  .contact-info {
+    text-align: center;
+    color: #333; /* Set text color to a dark color */
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    font-size: 2em;
+    margin: 0 10px;
+    color: #333; /* Set icon color to a dark color */
+    transition: color 0.3s ease; /* Add a smooth transition effect for icon color */
+  }
+  
+  .social-icons a:hover {
+    color: #00ffea; /* Change to your desired hover color */
+    transform: scale(1.2); /* Optional: Add a scaling effect on hover */
+  }
+  
+  /* Responsive adjustments for small screens */
+  @media (max-width: 576px) {
+    .contact-bg-image {
+      height: 50vh;
+    }
+  
+    .contact-bg-image h1 {
+      font-size: 2em;
+    }
+  
+    .contact-bg-image p {
+      font-size: 1em;
+    }
+  
+    .social-icons a {
+      font-size: 1.5em;
+    }
+  }
+  

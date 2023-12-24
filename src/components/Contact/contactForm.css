@@ -1,0 +1,30 @@
+/* ContactForm.css */
+
+.contact-form-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form-container h2 {
+    color: #007bff;
+  }
+  
+  .contact-form-container label {
+    font-weight: bold;
+  }
+  
+  .contact-form-container textarea {
+    resize: vertical;
+  }
+  
+  .contact-form-container button {
+    background-color: #28a745;
+    border: none;
+  }
+  
+  .contact-form-container button:hover {
+    background-color: #218838;
+  }
+  

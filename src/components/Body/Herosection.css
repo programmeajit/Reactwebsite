@@ -1,0 +1,22 @@
+/* YourComponent.css */
+
+.bg-image {
+    background-image: url('../../assets/nature.jpg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Set the height to cover the entire viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bg-image h1 {
+    font-size: 3em; /* Adjust the font size as needed */
+    margin-bottom: 20px;
+  }
+  
+  .bg-image p {
+    font-size: 1.5em; /* Adjust the font size as needed */
+  }
+  

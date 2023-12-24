@@ -1,0 +1,13 @@
+.footer {
+    background-color: #444939;
+}
+/* Remove underline by default */
+.footer-link {
+    text-decoration: none;
+  }
+  
+  /* Add underline on hover */
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
