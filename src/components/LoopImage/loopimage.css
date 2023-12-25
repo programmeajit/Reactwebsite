@@ -1,0 +1,28 @@
+.horizontal-image-loop-container {
+  overflow: hidden;
+  width: 100%;
+  height: 400px ;/* Adjust the width based on your image width */
+  margin: 20px 0;
+}
+
+.horizontal-image-loop {
+  display: flex;
+  animation: scroll 5s linear infinite;
+}
+
+.horizontal-image-loop img {
+  width: 350px; /* Adjust the width based on your image width */
+  height: 350px; /* Adjust the height based on your image height */
+  object-fit: cover;
+  margin-right: 20px;
+
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Adjust the percentage based on the number of images */
+  }
+}

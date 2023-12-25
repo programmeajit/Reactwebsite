@@ -1,66 +1,116 @@
-import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { useSpring, animated } from "react-spring";
-import "./Section.css"; // Import your custom CSS file
+// import Carousel from 'react-bootstrap/Carousel'
+ import photo from '../../assets/about/aboutus.jpg';
+// function Section() {
+//   return (
+//     <div className="container">
+//     <Carousel data-bs-theme="dark">
+//       <Carousel.Item>
+//         <img
+//           className="d-block w-100"
+//           src={photo}
+//           alt="First slide"
+//         />
+//         <Carousel.Caption>
+//           <h5>First slide label</h5>
+//           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+//       <Carousel.Item>
+//         <img
+//           className="d-block w-100"
+//           src={photo}
+//           alt="Second slide"
+//         />
+//         <Carousel.Caption>
+//           <h5>Second slide label</h5>
+//           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+//       <Carousel.Item>
+//         <img
+//           className="d-block w-100"
+//           src={photo}
+//           alt="Third slide"
+//         />
+//         <Carousel.Caption>
+//           <h5>Third slide label</h5>
+//           <p>
+//             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+//           </p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+//     </Carousel>
+//     </div>
+//   );
+// }
 
-const Section = () => {
-  const [activeSection, setActiveSection] = useState(0);
+// export default Section;
 
-  const sections = [
+import React from 'react'
+import Carousel from 'react-bootstrap/Carousel';
+import { FaQuoteLeft, FaStar, FaStarHalfAlt } from 'react-icons/fa';
+
+function Section() {
+  
+  const testimonialsData = [
     {
-      title: "About us 1",
-      subtitle: "Your Source for Mobile Entertainment",
-      description:
-        "Section Description goes here. This is a long paragraph that will be centered both horizontally and vertically within the container. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus distinctio deserunt ex veritatis cumque cum esse sunt, voluptatum alias, optio quaerat maiores provident laudantium voluptas omnis aperiam!.",
+      imgSrc: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp',
+      name: 'Maria Smantha',
+      role: 'Web Developer',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.',
+      rating: 4.5,
     },
     {
-      title: "About us 2",
-      subtitle: "Your Source for Mobile Entertainment",
-      description:
-        "Section Description goes here. This is a long paragraph that will be centered both horizontally and vertically within the container. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus distinctio deserunt ex veritatis cumque cum esse sunt, voluptatum alias, optio quaerat maiores provident laudantium voluptas omnis aperiam!.",
+      imgSrc: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp',
+      name: 'Lisa Cudrow',
+      role: 'Graphic Designer',
+      description: 'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi.',
+      rating: 5,
     },
     {
-      title: "About us 3",
-      subtitle: "Your Source for Mobile Entertainment",
-      description:
-        "Section Description goes here. This is a long paragraph that will be centered both horizontally and vertically within the container. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus distinctio deserunt ex veritatis cumque cum esse sunt, voluptatum alias, optio quaerat maiores provident laudantium voluptas omnis aperiam!.",
+      imgSrc: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp',
+      name: 'John Smith',
+      role: 'Marketing Specialist',
+      description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.',
+      rating: 4,
     },
+    
   ];
-
-  const props = useSpring({
-    opacity: 1,
-    transform: `translateX(-${activeSection * 100}%)`,
-  });
-
-  const nextSection = () => {
-    setActiveSection((prevSection) =>
-      prevSection === sections.length - 1 ? 0 : prevSection + 1
-    );
-  };
-
-  const prevSection = () => {
-    setActiveSection((prevSection) =>
-      prevSection === 0 ? sections.length - 1 : prevSection - 1
-    );
-  };
-
   return (
-    <div className="container my-5 d-flex align-items-center justify-content-center bg-primary">
-      <div className="carousel-container">
-        <animated.div className="text-center mx-3 text-light animated-section" style={props}>
-          <h4 className="my-5">{sections[activeSection].title}</h4>
-          <h2 className="display-4">{sections[activeSection].subtitle}</h2>
-          <p className="mx-auto">{sections[activeSection].description}</p>
-        </animated.div>
-        <button className="btn btn-primary prev" onClick={prevSection}>
-          &lt;
-        </button>
-        <button className="btn btn-primary next" onClick={nextSection}>
-          &gt;
-        </button>
-      </div>
+
+    <div className="container bg-dark justify-content-center">
+      <Carousel>
+      
+        {testimonialsData.map((testimonial, index) => (
+
+        <Carousel.Item interval={1000}>
+                <div className="col-md-4 mb-5 mb-md-0 text-light">
+                  <div className="d-flex justify-content-center mb-4">
+                    <img src={testimonial.imgSrc} className="rounded-circle shadow-1-strong" width="150" height="150" alt={testimonialsData.name} />
+                  </div>
+                  <h5 className="mb-3">{testimonial.name}</h5>
+                  <h6 className="text-primary mb-3">{testimonial.role}</h6>
+                  <p className="px-xl-3">
+                    <FaQuoteLeft className="pe-2" />
+                    {testimonial.description}
+                  </p>
+                  <ul className="list-unstyled d-flex justify-content-center">
+                    {Array.from({ length: 5 }, (_, index) => (
+                      <li key={index}>
+                        {index + 1 <= testimonial.rating ? <FaStar className="fa-sm text-warning" /> : <FaStarHalfAlt className="fa-sm text-warning" />}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+
+                
+        </Carousel.Item>
+
+        ))}  
+      </Carousel>
     </div>
   );
-};
+}
 
 export default Section;

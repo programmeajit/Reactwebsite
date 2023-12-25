@@ -2,8 +2,8 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import photo from '../../assets/about/aboutus.jpg';
 import './aboutus.css';
-import ReviewList from '../../components/LoopImage/loopreviews';
 import Review from '../../components/Reviews/Review';
+import Looping from '../../components/LoopImage/loopimage';
 
 export default function Aboutus() {
   const containers = [
@@ -44,6 +44,7 @@ export default function Aboutus() {
         ))}
       </div>
       <Review/>
+      <Looping/>
     </div>
   );
 }
