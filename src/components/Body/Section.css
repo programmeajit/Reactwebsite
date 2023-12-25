@@ -1,32 +1,5 @@
-.carousel-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.btn.prev,
-.btn.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.5rem;
-  background-color: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.btn.prev {
-  left: 10px;
-}
-
-.btn.next {
-  right: 10px;
-}
-/* Section.css */
-
-.animated-section {
-  /* Add your animation styles here */
-  will-change: opacity, transform;
-  transition: opacity 0.10s ease, transform 0.5s ease;
+.section-image {
+  width: 500px;
+  height:300px;
+  object-fit: cover;
 }

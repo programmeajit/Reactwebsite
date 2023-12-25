@@ -1,5 +1,6 @@
 import React from 'react';
 import Testimonial from './ReviewCard';
+import Carousel from 'react-bootstrap/Carousel';
 
 const Testimonials = () => {
   const testimonialsData = [
@@ -29,6 +30,7 @@ const Testimonials = () => {
 
   return (
     <section className="container mb-5 mt-5 border border-1 pt-4">
+
       <div className="row d-flex justify-content-center">
         <div className="col-md-10 col-xl-8 text-center">
           <h3 className="mb-4">Testimonials</h3>
@@ -40,11 +42,20 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div className="row text-center">
-        {testimonialsData.map((testimonial, index) => (
-          <Testimonial key={index} {...testimonial} />
-        ))}
-      </div>
+          <div className="row text-center">
+          <Carousel>
+            {testimonialsData.map((testimonial, index) => (
+              <Carousel.Item interval={500}>
+                <Testimonial key={index} {...testimonial} />
+              </Carousel.Item>
+              
+      
+            ))}
+          </Carousel>
+          
+          </div>
+          
+     
     </section>
   );
 };

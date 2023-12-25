@@ -3,24 +3,25 @@ import { Row, Col } from 'react-bootstrap';
 import photo from '../../assets/about/aboutus.jpg';
 import './aboutus.css';
 import Review from '../../components/Reviews/Review';
-import Looping from '../../components/LoopImage/loopimage';
+import sun from '../../assets/home/sunsine.webp';
+import tree from '../../assets/home/tree.jpg';
 
 export default function Aboutus() {
   const containers = [
     {
       title: 'About Us',
       description: 'Description 1 goes here.',
-      imageSrc: photo,
+      imageSrc: sun,
     },
     {
       title: 'About Us',
       description: 'Description 2 goes here.',
-      imageSrc: photo,
+      imageSrc: tree,
     },
     {
       title: 'About Us',
       description: 'Description 3 goes here.',
-      imageSrc: photo,
+      imageSrc: sun,
     },
   ];
 
@@ -44,7 +45,6 @@ export default function Aboutus() {
         ))}
       </div>
       <Review/>
-      <Looping/>
     </div>
   );
 }
